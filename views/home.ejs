@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blog</title>
+	<link rel="stylesheet"  href="css/styles.css">
+</head>
+<body>
+<div>
+</div>
+	<%- include('partial/header') -%>
+<div>
+<h1>Home</h1>
+<p><%= homeStartingContent %>
+
+<% posts.forEach(function(values) {%>
+<h1><%= values.title %></h1>
+<p><%=values.body.substring(0,100) + "..." %> <a href="/post/<%= values.title%>">Read More</a></p>
+<%});%>
+</div>
+<div>
+	<link rel="apple-touch-icon" sizes="180x180" href="/public/.png">
+	<a href ="/compose"><img class="logo" src="http://localhost:3000/apple-touch-icon.png" alt="My_Logo" ></a>
+	
+</div>
+<%- include('partial/footer') -%>
+
+
+</body>
+</html>

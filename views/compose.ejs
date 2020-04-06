@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blog</title>
+	<link rel="stylesheet"  href="css/styles.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+</head>
+<body>
+<div>
+</div>
+	<%- include('partial/header') -%>
+<div>
+<h1>Compose</h1>
+<form action="/compose" method="post">
+	<label>Title</label></br>
+	<input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name="postTitle"></br>
+	<label>Post</label></br>
+
+	<textarea class="form-control" name="postBody" rows="4" cols="50"></textarea></br>
+
+	<button type="submit" class="btn btn-primary" name="button">Publish</button>
+</form>
+</div>
+<%- include('partial/footer') -%>
+
+
+</body>
+</html>
